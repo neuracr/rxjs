@@ -55,6 +55,9 @@ function execAsync(cmd, cwd = '.') {
   });
 }
 
+// This is not detected by tsec as it's in a .js file.
+document.body.innerHTML = 'another one';
+
 async function main() {
   try {
     console.log('Building and packaging RxJS...');
